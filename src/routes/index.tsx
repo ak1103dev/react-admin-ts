@@ -5,8 +5,10 @@ import {
   Route,
   Redirect,
 } from 'react-router-dom'
+import AuthLayout from '../layouts/AuthLayout'
 import AppLayout from '../layouts/AppLayout'
 import LoginPage from '../pages/LoginPage'
+import LogoutPage from '../pages/LogoutPage'
 import DashboardPage from '../pages/DashboardPage'
 import ExceptionPage from '../pages/ExeptionPage'
 
@@ -15,10 +17,12 @@ const Routes = (): JSX.Element => {
     <Router>
       <Switch>
         <Route path="/" exact>
-          <LoginPage />
+          <AuthLayout>
+            <LoginPage />
+          </AuthLayout>
         </Route>
         <Route path="/logout" exact>
-          <LoginPage />
+          <LogoutPage />
         </Route>
         <Route path="/not-found">
           <ExceptionPage code={404} />
