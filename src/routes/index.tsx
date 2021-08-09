@@ -17,10 +17,13 @@ const Routes = (): JSX.Element => {
         <Route path="/" exact>
           <LoginPage />
         </Route>
+        <Route path="/logout" exact>
+          <LoginPage />
+        </Route>
         <Route path="/not-found">
           <ExceptionPage code={404} />
         </Route>
-        <Route>
+        <Route path={['/dashboard']}>
           <AppLayout>
             <Route path="/dashboard">
               <DashboardPage />
