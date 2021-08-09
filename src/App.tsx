@@ -1,15 +1,16 @@
 import React from 'react'
 import 'antd/dist/antd.less'
-import { DatePicker, Button } from 'antd'
+import Routes from './routes'
+import { AuthProvider } from './contexts/AuthContext'
+import { LocalizationProvider } from './contexts/LocalizationContext'
 
 function App(): JSX.Element {
   return (
-    <div>
-      <DatePicker />
-      <div>
-        <Button type="primary">Hello</Button>
-      </div>
-    </div>
+    <LocalizationProvider>
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
+    </LocalizationProvider>
   )
 }
 

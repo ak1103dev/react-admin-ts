@@ -1,0 +1,11 @@
+{
+	"menu": {
+		"dashboard": "Dashboard",
+		"checklist": "Checklist",
+		"vaccine": "Vaccine",
+		"healthCheck": "Health Check",
+		"development": "Development",
+		"user": "User",
+		"logout": "Logout"
+	}
+}
